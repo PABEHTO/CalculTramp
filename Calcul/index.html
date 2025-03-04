@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="task">
+        <div>
+            <select id="inputType">
+                <option value="side" selected>Основания и боковая сторона</option>
+                <option value="angle">Основания и угол</option>
+            </select>
+            <input type="button" value="Показать" id="showButton">
+        </div>
+
+        <img id="trapezoidImage" src="sideImage.png">
+
+        <div class="input">
+            <form>
+                <p>
+                    <label>Основание a = 
+                        <input type="number" id="a" min="0">
+                    </label>
+                    <span id="a-error" class="error-message"></span>
+                </p>
+                <p>
+                    <label>Основание b = 
+                        <input type="number" id="b" min="0">
+                    </label>
+                    <span id="b-error" class="error-message"></span>
+                </p>
+                <div id="sideInput">
+                    <p>
+                        <label>Боковая сторона c = 
+                            <input type="number" id="c" min="0">
+                        </label>
+                        <span id="c-error" class="error-message"></span>
+                    </p>
+                </div>
+                <div id="angleInput" style="display: none;">
+                    <p>
+                        <label>Угол α (в градусах) = 
+                            <input type="number" id="alpha" min="0" max="90">
+                        </label>
+                        <span id="alpha-error" class="error-message"></span>
+                    </p>
+                </div>
+
+                <p>
+                    Найти: <span id="checkbox-error" class="error-message"></span><br>
+                    <label><input type="checkbox" id="angleBetweenDiagonals"> Угол между диагоналями</label><br>
+                    <label><input type="checkbox" id="height"> Высота</label><br>
+                    <label><input type="checkbox" id="diagonals"> Диагонали</label>
+                </p>
+
+                <p>
+                    <input type="button" value="Вычислить" id="calculateButton">
+                    <input type="button" value="Очистить" id="clearButton">
+                </p>
+            </form>
+        </div>
+
+        <div id="output"></div>
+    </div>
+    <script src="program.js"></script>
+</body>
+</html>
